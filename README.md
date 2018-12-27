@@ -62,8 +62,26 @@ Het woord Auth in OAuth staat voor authorisatie en niet voor authenticatie. Zoal
 OpenID is gebaseerd op OAuth, maar levert in plaats van een access token een ID Token. In dit ID token staan vaak door middel van JWT de claims over de gebruiker (zoals naam en e-mailadres). Een voordeel ten op zichte van OAuth voor het aanleveren de identiteit is dat OpenID niet standaard een access token oplevert waarmee de API benadert kan worden. Bij OAuth zou je naast de identiteit ook de sleutel tot het beheer van de gegevens van de gebruiker krijgen.
 
 ## SAML
-Naast OAuth/OpenID kan er ook gekozen worden voor Secure Assertion Markup Language (SAML) als authenticatie/authorizatie protocol. Dit protocol is meer gebaseerd op de intergratie van enterprise applicaties. Hierbij wordt er federation toegepast. 
+In plaats van OAuth/OpenID kan er ook gekozen worden voor Secure Assertion Markup Language (SAML) als authenticatie/authorizatie protocol. Dit protocol is gebaseerd op de intergratie (SSO) van enterprise applicaties. Hierbij wordt er federation toegepast. Hoewel SAML als een open protocol is ontworpen, is het toepassen van OAuth voor (mobiele) webapplicaties vaak makkelijker. In het onderstaande diagram wordt de flow van SAML weergeven.
+![SAML Flow](Images/saml_flow.png "SAML Flow")
 
-https://developer.okta.com/authentication-guide/auth-overview/#authentication-api-vs-oauth-20-vs-openid-connect
-https://developer.okta.com/authentication-guide/
-https://raw.githubusercontent.com/Ifective/AzureSearchQuickStart/master/README.md
+Bij SAML worden de volgende termen gebruikt:
+- **Identity Provider** *de bron van de gebruikersidentity*
+- **Agent** *het identity management systeem*
+- **Service Provider** *de service die de data bevat waar de gebruiker toegang tot wil*
+
+Als de gebruiker is ingelogd bij de identity provider, kan de gebruiker toegang krijgen tot andere applicaties die dezelfde identity provider gebruiken zonder opnieuw te hoeven inloggen. 
+
+# Inrichting Identity Access Management
+De meeste identity access management systemen hebben de volgende onderdelen:
+- Een database met gebruikers met credentials, profielinformatie en groepen
+- Een lijst met applicatie registraties van applicaties die toegang kunnen krijgen (eventueel met een client secret)
+- Eén of meerdere authorization servers waarin onder andere policies over de scopes, claims en de levensduur van tokens is vastgelegd
+- Een API voor het beheren van de instellingen en gebruikers
+- Overige functionaliteiten rond beveiliging, zoals multifactor authenticatie, externe identity providers en vertrouwde netwerken
+- Beveiligingsrapportage
+
+# Conclusie
+Er zijn diverse aspecten rond Identity Access Management aan bod gekomen. Er spelen echter veel meer details en overwegingen bij de implementatie hiervan. Wilt u meer informatie hierover? Neem dan contact met ons op.
+
+*De gebruikte afbeeldingen zijn afkomstig van [developer.okta.com](https://developer.okta.com/documentation/) en [wikipedia](https://en.wikipedia.org/wiki/OAuth)*
