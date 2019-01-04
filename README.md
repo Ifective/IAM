@@ -82,6 +82,6 @@ De meeste identity access management systemen hebben de volgende onderdelen:
 - Beveiligingsrapportage
 
 # Conclusie
-Er zijn diverse aspecten rond Identity Access Management aan bod gekomen. Er spelen echter veel meer details en overwegingen bij de implementatie hiervan. Wilt u meer informatie hierover? Neem dan contact met ons op.
+Er zijn diverse aspecten rond Identity Access Management aan bod gekomen. Er spelen echter veel meer details en overwegingen bij de implementatie hiervan. Wilt u meer informatie hierover? Neem dan contact met ons op via telefoon: 085-0443333 of via email: [info@ifective.nl](mailto:info@ifective.nl).
 
 *De gebruikte afbeeldingen zijn afkomstig van [developer.okta.com](https://developer.okta.com/documentation/) en [Wikipedia](https://en.wikipedia.org/wiki/OAuth)*
